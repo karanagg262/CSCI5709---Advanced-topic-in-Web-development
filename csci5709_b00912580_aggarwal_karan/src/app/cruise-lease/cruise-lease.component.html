@@ -1,0 +1,108 @@
+<app-cruise-header>
+
+</app-cruise-header>
+<nav class="cruise" >
+  <img src="https://images.rawpixel.com/image_1300/cHJpdmF0ZS9sci9pbWFnZXMvd2Vic2l0ZS8yMDIyLTEyL2xyL2RpZ2l0YWxjd2NvbW1vbndlYWx0aHB6NTBoMDkxNS1pbWFnZS5qcGc.jpg" alt="image"/>
+</nav>
+
+<section class="editlease">
+  <form #form="ngForm" (ngSubmit)="onSubmitlease()">
+    <h2>Reschedule or Cancel</h2>
+    <label>Cruise ID  </label>
+    <input placeholder = "Please enter cruise ID" name="id" required [(ngModel)]="id" (keypress)="checkAlphanumeric($event)">
+    <button type="submit" class="prebutton">Submit</button>
+      <p style="color:red" *ngIf="idFail"> {{cruiseIdError}}
+      </p>
+  </form>
+</section>
+
+<section class="leaseform">
+  <h1>New Cruise Registration</h1>
+  <h2>Please enter cruise details</h2>
+  <form #form="ngForm" (ngSubmit)="onSubmit(form)">
+
+    <label> Cruise Name  </label><br>
+    <input name="cruisename" ngModel required [(ngModel)]="cruisename" (keypress)="checkAlpha($event)">       
+    <p style="color:red" *ngIf="cruisenameFail">
+      Please enter the Cruise Name.
+    </p> 
+    <br/><br/>
+
+    <label> Cruise Manufacturing Year  </label><br>
+    <input name="year" ngModel required [(ngModel)]="year" (keypress)="checkNumeric($event)" maxlength="4">
+    <p style="color:red" *ngIf="yearFail">
+      Please enter the Manufacturing year.
+    </p>  <br/><br/>
+
+    <label> Cruise Model Number  </label><br>
+    <input name="model" ngModel required [(ngModel)]="model" (keypress)="checkAlphanumeric($event)">
+    <p style="color:red" *ngIf="modelFail">
+      Please the Cruise Model Number.
+    </p>  <br/><br/>
+
+    <label> Cruise Capacity  </label><br>
+    <input name="capacity" ngModel required [(ngModel)]="capacity" (keypress)="checkNumeric($event)"> 
+    <p style="color:red" *ngIf="capacityFail">
+      Please enter the Cruise capacity.
+    </p> <br/><br/>
+
+    <label> Number of Rooms available  </label><br>
+    <input name="rooms" ngModel required [(ngModel)]="rooms" (keypress)="checkNumeric($event)">
+    <p style="color:red" *ngIf="roomsFail">
+      Please enter number of rooms in cruise.
+    </p>  <br/><br/>
+
+    <label> Period of time is available for </label><br>
+    <input type="date" name="fromavailability" ngModel required [(ngModel)]="fromavailability" min="2023-03-11"> <br><br>
+    <input type="date" name="toavailability" ngModel required [(ngModel)]="toavailability" min="2023-03-15">
+    <p style="color:red" *ngIf="fromAvailabilitFail">
+      Please enter the from availability date.
+    </p> 
+    <p style="color:red" *ngIf="toavailabilityFail">
+      Please enter the to availability date.
+    </p> 
+     <br/><br/>
+
+    <label> Upload Photos </label><br>
+    <input type="file" name="first" required>
+
+
+    <h2>Please enter personal details</h2>
+    <label> First Name </label><br>
+    <input name="firstname" ngModel required [(ngModel)]="firstname" (keypress)="checkAlpha($event)">
+    <p style="color:red" *ngIf="firstnameFail">
+      Please enter your first Name.
+    </p>  <br/> <br/>
+
+    <label> Last Name </label><br>
+    <input name="lastname" ngModel required [(ngModel)]="lastname" (keypress)="checkAlpha($event)">
+    <p style="color:red" *ngIf="lastnameFail">
+      Please enter your Last Name.
+    </p>  <br/><br/>
+
+    <label> Email Address </label><br>
+    <input name="first" ngModel required [(ngModel)]="email">
+    <p style="color:red" *ngIf="emailFail">
+      Please enter your email address.
+    </p>  <br/><br/>
+
+    <label> Phone Number </label><br>
+    <input name="phone" ngModel required [(ngModel)]="phone" (keypress)="checkNumeric($event)">
+    <p style="color:red" *ngIf="phoneFail">
+      Please enter your phone number.
+    </p>  <br/><br/>
+
+    <label> Business Company Name </label><br>
+    <input name="companyname" ngModel [(ngModel)]="companyname" (keypress)="checkAlphanumeric($event)"><br/><br/>
+    <label> Business Registration Number </label><br>
+    <input name="rnumber" ngModel required [(ngModel)]="rnumber" (keypress)="checkAlphanumeric($event)"><br/><br/>
+    <button class="submit" type="submit">Submit</button>
+    <button class="cancel" type="button" (click)="onCancel()" *ngIf=editmydetails >Cancel</button><br>
+  </form>
+</section>
+
+
+
+<app-cruise-footer>
+
+</app-cruise-footer>

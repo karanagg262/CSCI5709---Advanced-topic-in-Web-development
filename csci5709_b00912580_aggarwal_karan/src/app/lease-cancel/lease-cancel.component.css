@@ -1,0 +1,22 @@
+h2{
+    text-align: center;
+    background-color:white;
+    font-family:'Lorem Ipsum';
+    max-width: 80%;
+    width:90%;
+    margin-top: 10%;
+    margin-bottom: auto;
+    margin-left: auto;
+    margin-right: auto;
+    width:90%;
+}
+.cruise{
+    padding-top: 1%;
+    padding-left: 1%;
+    padding-right: 1%;
+}
+img{
+    width: 100%;
+    height: 570px;
+    border-radius: 2%;
+}

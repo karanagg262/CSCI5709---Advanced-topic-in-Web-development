@@ -1,0 +1,88 @@
+.cruise{
+    padding-top: 6%;
+    padding-left: 1%;
+    padding-right: 1%;
+}
+img{
+    width: 100%;
+    height: 250px;
+    border-radius: 2%;
+}
+.editlease{
+    padding-top: 1%;
+    padding-bottom: 2%;
+    padding-left: 2%;
+    padding-right: 2%;
+    background-color:white;
+    font-family:'Lorem Ipsum';
+    max-width: 80%;
+    width:90%;
+    margin-top: 4%;
+    margin-left: auto;
+    margin-right: auto;
+    margin-bottom: 2px;
+    width:90%;
+    box-shadow: 1px 1px 4px rgba(0,0,0.15)
+}
+
+.leaseform{
+    padding: 2%;
+    background-color:white;
+    font-family:'Lorem Ipsum';
+    max-width: 80%;
+    width:90%;
+    margin: 0 auto;
+    margin-bottom: 7%;
+    box-shadow: 1px 1px 4px rgba(0,0,0.15)
+}
+
+h1{
+    font-size:xx-large;
+    text-align: center;
+}
+
+label{
+    padding-right:10px;
+    font-size:x-large;
+}
+input{
+    font-size: large;
+    height: 30px;
+    width:50vw;
+    border-radius: 5%;
+}
+
+.prebutton{
+    background-color: rgb(51, 102, 255);
+    color: white;
+    padding: 7px 32px;
+    text-align: center;
+    display: inline-block;
+    font-size: 16px;
+    margin-left: 40px;
+    cursor: pointer;
+    border-radius: 10%;
+}
+
+.submit{
+    background-color: rgb(51, 102, 255);
+    color: white;
+    padding: 7px 32px;
+    text-align: center;
+    display: inline-block;
+    font-size: 16px;
+    cursor: pointer;
+    border-radius: 10%;
+}
+
+.cancel{
+    background-color: rgb(51, 102, 255);
+    color: white;
+    padding: 7px 32px;
+    text-align: center;
+    display: inline-block;
+    font-size: 16px;
+    cursor: pointer;
+    border-radius: 10%;
+    margin-left: 40px;
+}
